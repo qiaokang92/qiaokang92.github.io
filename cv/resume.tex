@@ -27,22 +27,30 @@
 \newcommand{\itab}[1]{\hspace{0em}\rlap{#1}}
 \name{Qiao Kang} % Your name
 \address{PhD student, Rice University, Houston, TX 77005} % Your address
-\address{(+1) 346-317-2056,  qiaokang1213@gmail.com, qiaokang.org}
+\address{(+1) 346-317-2056,  qiaokang1213@gmail.com, wechat: buaakq}
+\address{https://qiaokang.org}
 
 \begin{document}
 
 
-\begin{rSection}{Research interests}
-I am broadly  interested in networking, distributed systems, and security.
-My current research focus is leveraging programmable network devices
-for efficient and secure networked systems.
-\end{rSection}
+%\begin{rSection}{Research interests}
+%I am broadly  interested in networking, distributed systems, and security.
+%My current research focus is leveraging programmable network devices
+%for efficient and secure networked systems.
+%\end{rSection}
+
+
+I plan to leave my current PhD program with an MS degree and hunt for a job in industry
+at the end of 2020.
+I'm interested in a software engineer position of system software development,
+including but not limited to networking, distributed systems, and security.
+I'm open to opportunities in both the United States and China.
 
 
 \begin{rSection}{Education}
 
-{\bf Rice University, USA} \hfill { Aug 2018 - Present}
-\\ Ph.D. student
+{\bf Rice University, USA} \hfill { Aug 2018 - Dec 2020}
+\\ Ph.D. student (will leave and graduate with an MS degree)
 
 {\bf Beihang University, China} \hfill { Sep 2014 - Jun 2017}
 \\ MS in Software Engineering
@@ -56,35 +64,125 @@ for efficient and secure networked systems.
 
 \begin{rSection}{Work Experience}
 
-{\bf OS kernel developer, VMware} \hfill { Jan 2017 - Jun 2018} \\
-Network interface card (NIC) driver development in the ESXi kernel.
+\item {\bf OS kernel developer, VMware} \hfill { Jan 2017 - Jun 2018}
 
-%\item Developed ESXi NIC driver for the Virtio virtualization framework.
-%\item Maintained the Solarflare 10G/40G NIC drivers.
+My main job was Network Interface Card (NIC) driver development in the
+ESXi kernel.
+I developed ESXi NIC driver for the Virtio virtualization framework from
+scratch.
+I also Maintained the Solarflare 10G/40G NIC drivers.
+
+\vspace{2mm}
 
 \end{rSection}
 
 
+\begin{rSection}{Research Experience}
 
-\begin{rSection}{Publications}
+\vspace{2mm}
+
+At Rice University, my research work centers around emerging network hardware,
+such as P4-programmable switches and SmartNICs.
+My first two projects (Poise and NetWarden) seek to leverage P4 switches to build more secure networks.
+My third project (P4wn) contrinbutes a novel profiling tool for stateful P4 programs.
+My fourth project (Clara) aims at providing performance prediction for SmartNIC offloading.
+
+\vspace{2mm}
+
+\item {\bf Clara: Performance Clarity for SmartNIC Offloading} \hfill { April 2020 - Present}
+
+Offloading packet processing programs from CPUs to SmartNICs can bring significant performance benefits,
+but the developer has no easy way to understand the offloaded performance beforehand.
+We develop Clara, an automated tool to analyze a legacy NF in its unported form,
+identify acceleration opportunities, and predict its offloaded performance.
+Our experiments using Click NFs and a Netronome SmartNIC demonstrate that Clara
+can provide useful offloading hints and reasonable prediction accuracy.
+({\bf HotNets'20})
+%We have published a workshop paper in the {\bf HotNets'20 Workshop}.
+%Our full paper is in progress.
+
+\vspace{3mm}
+
+\item {\bf P4wn: Probabilistic Profiling of Stateful Data Planes (project lead)}    \hfill { May 2019 - Present}
+
+There is a flurry of projects that develop networked systems in P4-programmable switches,
+but existing program profiling tools are unable to catch up.
+We develop P4wn, a program profiler that can analyze stateful program behaviors
+of recent P4 systems, as well as the behavior probabilities, in a scalable manner.
+We show P4wn is useful to discovering adversarial inputs to these P4 systems
+by distinguishing and stressing the program ``edge cases''.
+%We have published a preliminary paper in the {\bf USENIX CSET'19 Workshop}
+%and our full conference paper is under review.
+({\bf CSET'19, ASPLOS'21})
+
+\vspace{3mm}
+
+\item {\bf NetWarden: Mitigating Network Covert Channels without Performance Loss} \hfill { May 2019 - Nov 2019}
+
+Network covert channels are an advanced class of attacks to modern networks.
+Traditional solutions rely on general-purpose CPUs to detect and mitigate them,
+but they can incur high performance overhead.
+We propose NetWarden, which leverages P4 switches to mitigate network covert channels
+at switch data planes.
+Our experiments show that NetWarden can achieve similar detection accuracy and mitigation
+effectiveness compared with existing solutions, but without hurting end-to-end TCP performance.
+%Our research paper is published at {\bf USENIX Security'20}, a top-tier conference in Computer Security.
+({\bf USENIX Security'20})
+
+\vspace{3mm}
+
+\item {\bf Poise: Programmable In-Network Security for BYOD Policies (project lead)} \hfill { Aug 2018 - Sep 2019}
+
+We present a new security paradigm called programmable in-network security (Poise) for
+enforcing access control policies in enterprise networks.
+Administrators write security policies using an easy-to-use, high-level language,
+and our Poise compiler can generate P4 programs, which will be installed in programmable switches,
+to enforce these policies.
+Poise outperforms traditional solutions which are based on OpenFlow networks, and
+is resilient to control plane saturation attacks.
+%Our research paper is published at {\bf USENIX Security'20}, a top-tier conference in Computer Security.
+({\bf CSET'19, USENIX Security'20})
+
+\vspace{2mm}
+
+\end{rSection}
+
+\begin{rSection}{Research publications}
+
+
+\item {\bf Probabilistic Profiling of Stateful Data Planes for Adversarial Testing}\\
+{\bf Qiao Kang}, Jiarong Xing, Yiming Qiu, and Ang Chen \\
+26th International Conference on Architectural Support for Programming Languages and Operating Systems ({\bf ASPLOS'21}), Virtual, April 2021
+
+\vspace{3mm}
 
 \item {\bf Clara: Performance Clarity for SmartNIC Offloading}\\
 Yiming Qiu$^\star$, {\bf Qiao Kang$^\star$}, Ming Liu, and Ang Chen \\
-19th ACM Workshop on Hot Topics in Networks ({\bf HotNets'20}), Chicago, II, USA, Nov 2020
+19th ACM Workshop on Hot Topics in Networks ({\bf HotNets'20}), Virtual, Nov 2020
+
+\vspace{3mm}
 
 \item {\bf Mitigating Network Covert Channels while Preserving Performance}\\
 Jiarong Xing, {\bf Qiao Kang}, and Ang Chen\\
-29th USENIX Security Symposium ({\bf Security'20}), Boston, MA, USA, Aug 2020
+29th USENIX Security Symposium ({\bf Security'20}), Virtual, Aug 2020
+
+\vspace{3mm}
 
 \item {\bf Programmable In-Network Security for Context-aware BYOD Policies}\\
 {\bf Qiao Kang$^\star$}, Lei Xue$^\star$, Adam Morrison$^\star$, Yuxin Tang, Ang Chen, and Xiapu Luo\\
-29th USENIX Security Symposium ({\bf Security'20}), Boston, MA, USA, Aug 2020
+29th USENIX Security Symposium ({\bf Security'20}), Virtual, Aug 2020
+
+\vspace{3mm}
 
 \item {\bf Automated Attack Discovery in Data Plane Systems}\\
 {\bf Qiao Kang}, Jiarong Xing and Ang Chen\\
 12th USENIX Workshop on Cyber Security Experimentation and Test ({\bf CSET'19}), Santa Clara, CA, USA, Aug 2019
 
+\vspace{1mm}
+
 ($^\star$ indicates equal contribution)
+
+\vspace{2mm}
 
 \end{rSection}
 
@@ -112,48 +210,14 @@ CSET'19, Santa Clara, CA, USA, Aug 2019
 %\end{rSection}
 
 
-\begin{rSection}{Research Experience}
-
-\item {\bf Performance Clarity for SmartNIC Offloading} \hfill { April 2020 - Present}
-
-Offloading packet processing programs from CPUs to SmartNICs might bring significant performance benefits.
-However, the developer has no easy way to understand the offloaded performance beforehand.
-We develop Clara to provide performance clarity for SmartNIC offloading.
-%We have published a workshop paper in the {\bf HotNets'20 Workshop}.
-%Our full paper is in progress.
-
-\item {\bf Automated Attack Discovery in Data plane Systems}    \hfill { May 2019 - Present}
-
-We find a new class of network attacks to the emerging systems that rely on P4 switches.
-We propose an approach to discovering attack vectors in these systems in an automated manner.
-%We have published a preliminary paper in the {\bf USENIX CSET'19 Workshop}
-%and our full conference paper is under review.
-
-\item {\bf Mitigating Network Covert Channels without Performance Loss} \hfill { May 2019 - Nov 2019}
-
-We design and implement a system called NetWarden,
-which leverages emerging P4 switches to mitigate network covert channels
-while preserving TCP performance.
-%Our research paper is published at {\bf USENIX Security'20}, a top-tier conference in Computer Security.
-
-\item {\bf Programmable In-Network Security for BYOD Policies} \hfill { Aug 2018 - Sep 2019}
-
-We present a new security paradigm called programmable in-network security (Poise) for enterprise networks.
-Poise enforces access control based on dynamic run-time contexts,
-such as the GPS locations of mobile devices.
-%Our research paper is published at {\bf USENIX Security'20}, a top-tier conference in Computer Security.
-
-\end{rSection}
-
-
 \begin{rSection}{Skills} \itemsep -3pt
 
 %\begin{tabular}{ @{} >{\bfseries}l @{\hspace{6ex}} l }
 %Programming \ &
-\item Expertise in C, familiar with C++, Python and Shell
-\item Familiar with OS kernel development, especially network device drivers
+\item Expertise in C programming, familiar with C++, Python and Shell
+\item Familiar with OS kernel development, especially NIC drivers
 %\item Familiar with recent advances in networking, especially {\em programmable data planes}
-\item Familiar with P4 (a domain-specific language for data plane programming)
+\item Familiar with P4 (a domain-specific language for network data plane programming)
 %\end{tabular}
 
 \end{rSection}
